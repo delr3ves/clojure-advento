@@ -7,6 +7,7 @@
             }
   :dependencies [
                  [org.clojure/clojure "1.8.0"]
+                 [digest "1.4.4"]
                  ]
   :target-path "target/%s"
   :profiles {:dev     {
