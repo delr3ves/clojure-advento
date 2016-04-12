@@ -5,8 +5,9 @@
 
 (defn find-number [input number current-hash]
   (if (.startsWith current-hash "00000")
-    (- number 1)
-    (recur input (+ number 1) (digest/md5 (str input number)))
+    number
+    (let [next (+ number 1)]
+      (recur input next (digest/md5 (str input next))))
     )
   )
 
